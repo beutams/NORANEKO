@@ -49,6 +49,7 @@ namespace AIGameFramework.Architecture
         private Rect _canvasRect;
         private Vector2 _leftScroll;
         private Vector2 _rightScroll;
+        private GUIStyle _wrappedTextAreaStyle;
         private string _search = string.Empty;
         private LeftPaneMode _leftPaneMode = LeftPaneMode.Types;
         private string _palettePressed;
@@ -659,10 +660,20 @@ namespace AIGameFramework.Architecture
         {
             GUILayout.Label(label, EditorStyles.boldLabel);
             var height = Mathf.Max(200f, (_canvasRect.height - 110f) * 0.5f);
-            var next = EditorGUILayout.TextArea(current ?? string.Empty,
+            var next = EditorGUILayout.TextArea(current ?? string.Empty, WrappedTextAreaStyle,
                 GUILayout.MinHeight(height), GUILayout.ExpandWidth(true));
             if (next != (current ?? string.Empty)) Change(() => setter(next), key);
             GUILayout.Space(10);
+        }
+
+        private GUIStyle WrappedTextAreaStyle
+        {
+            get
+            {
+                if (_wrappedTextAreaStyle == null)
+                    _wrappedTextAreaStyle = new GUIStyle(EditorStyles.textArea) { wordWrap = true };
+                return _wrappedTextAreaStyle;
+            }
         }
 
         private void DrawInterfaceList(List<ArchitectureInterfaceItem> items, string key, string sourceNodeId = null)
@@ -695,7 +706,7 @@ namespace AIGameFramework.Architecture
                 GUILayout.EndHorizontal();
                 if (nextTitle != (item.title ?? string.Empty))
                     Change(() => item.title = nextTitle, key + "-title-" + item.id);
-                var nextContent = EditorGUILayout.TextArea(item.content ?? string.Empty,
+                var nextContent = EditorGUILayout.TextArea(item.content ?? string.Empty, WrappedTextAreaStyle,
                     GUILayout.MinHeight(105f), GUILayout.ExpandWidth(true));
                 if (nextContent != (item.content ?? string.Empty))
                     Change(() => item.content = nextContent, key + "-content-" + item.id);
