@@ -1,0 +1,108 @@
+{
+    "schemaVersion": 5,
+    "nodes": [
+        {
+            "id": "root",
+            "parentId": "",
+            "templateId": "",
+            "templateInstanceId": "",
+            "alias": "Root",
+            "functionText": "项目架构根节点",
+            "interfaceItems": [],
+            "interfaceText": "",
+            "purpose": "项目架构根节点",
+            "owns": "",
+            "excludes": "",
+            "codePath": "",
+            "position": {
+                "x": 217.5,
+                "y": 75.0
+            },
+            "interfaces": [
+                {
+                    "id": "fc17989490414a829c4370d04c6b33b0",
+                    "name": "NewInterface",
+                    "kind": "Method",
+                    "signature": "",
+                    "inputs": "",
+                    "outputs": "",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "id": "167d1ffa99124ac0b400c139398aba3d",
+            "parentId": "root",
+            "templateId": "",
+            "templateInstanceId": "",
+            "alias": "测试1",
+            "functionText": "",
+            "interfaceItems": [],
+            "interfaceText": "",
+            "purpose": "",
+            "owns": "",
+            "excludes": "",
+            "codePath": "",
+            "position": {
+                "x": 75.0,
+                "y": 276.0
+            },
+            "interfaces": []
+        },
+        {
+            "id": "2a209032173841049522a3ef86160421",
+            "parentId": "root",
+            "templateId": "",
+            "templateInstanceId": "",
+            "alias": "测试2",
+            "functionText": "",
+            "interfaceItems": [],
+            "interfaceText": "",
+            "purpose": "",
+            "owns": "",
+            "excludes": "",
+            "codePath": "",
+            "position": {
+                "x": 360.0,
+                "y": 276.0
+            },
+            "interfaces": []
+        },
+        {
+            "id": "c07a531486f846169d77d590b32f3d81",
+            "parentId": "167d1ffa99124ac0b400c139398aba3d",
+            "templateId": "01082b4e2bb24c4fbc489aa52a663eda",
+            "templateInstanceId": "c07a531486f846169d77d590b32f3d81",
+            "alias": "",
+            "functionText": "",
+            "interfaceItems": [],
+            "interfaceText": "",
+            "purpose": "",
+            "owns": "",
+            "excludes": "",
+            "codePath": "",
+            "position": {
+                "x": 75.0,
+                "y": 477.0
+            },
+            "interfaces": []
+        }
+    ],
+    "templates": [
+        {
+            "id": "01082b4e2bb24c4fbc489aa52a663eda",
+            "parentTemplateId": "",
+            "name": "新预制模块",
+            "presetText": "aaa\n",
+            "functionText": "",
+            "interfaceItems": [],
+            "interfaceText": "",
+            "purpose": "",
+            "owns": "",
+            "excludes": "",
+            "interfaces": []
+        }
+    ],
+    "calls": [],
+    "interfaceReferences": []
+}
