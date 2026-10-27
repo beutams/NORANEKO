@@ -34,7 +34,6 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         internal static readonly float DefaultWindowScale = 1f;
 
-        private static readonly TextEditor s_TextEditor = new TextEditor();
         private IDebuggerManager m_DebuggerManager = null;
         private Rect m_DragRect = new Rect(0f, 0f, float.MaxValue, 25f);
         private Rect m_IconRect = DefaultIconRect;
@@ -423,10 +422,7 @@ namespace UnityGameFramework.Runtime
 
         private static void CopyToClipboard(string content)
         {
-            s_TextEditor.text = content;
-            s_TextEditor.OnFocus();
-            s_TextEditor.Copy();
-            s_TextEditor.text = string.Empty;
+            GUIUtility.systemCopyBuffer = content;
         }
     }
 }
