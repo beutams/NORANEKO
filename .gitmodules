@@ -1,0 +1,4 @@
+[submodule "Assets/Dependence/AIGameFramework"]
+	path = Assets/Dependence/AIGameFramework
+	url = https://github.com/beutams/AIGameFramework.git
+	branch = main
