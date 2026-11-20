@@ -1,6 +1,8 @@
 # AI 架构工作规范
 
-本项目以架构编辑器中的 Node 树描述功能边界，以接口引用描述模块之间实际使用的能力。AI 在新增功能、修改行为或重构模块时，应先阅读本规范和 [`architecture.json`](architecture.json)，再结合代码确定实现位置。架构文本说明意图，代码呈现已实现行为；两者不一致时，应查明差异并在工作范围内同步，不能默默扩大模块职责。
+宿主项目以架构编辑器中的 Node 树描述功能边界，以接口引用描述模块之间实际使用的能力。AI 在新增功能、修改行为或重构模块时，应先阅读本规范和宿主项目中的 `Assets/AIArchitecture/architecture.json`，再结合代码确定实现位置。架构文本说明意图，代码呈现已实现行为；两者不一致时，应查明差异并在工作范围内同步，不能默默扩大模块职责。
+
+本规范随 `com.aigameframework.architecture` 包分发。包只包含编辑器代码、配置和文档；架构数据属于宿主项目，默认位于 `Assets/AIArchitecture/architecture.json`，格式示例见 [architecture.example.json](architecture.example.json)。若包安装在 `Packages/` 下，包内文档路径为 `Packages/com.aigameframework.architecture/Documentation~/AI_WORKFLOW.md`；若包放在其他位置，按实际路径读取。
 
 ## 1. Node 是功能边界
 
@@ -53,7 +55,7 @@
 
 ## 6. 架构数据的解释规则
 
-从 `Assets/Architecture/architecture.json` 读取 Node、预制定义和接口引用。普通 Node 的接口取自自身 `interfaceItems`；预制实例的有效接口取自其 `templateId` 指向的预制定义 `interfaceItems`。引用必须使用有效接口的 ID，而不是标题文字。
+从 `Assets/AIArchitecture/architecture.json` 读取 Node、预制定义和接口引用。普通 Node 的接口取自自身 `interfaceItems`；预制实例的有效接口取自其 `templateId` 指向的预制定义 `interfaceItems`。引用必须使用有效接口的 ID，而不是标题文字。
 
 `position` 只控制画布位置；展开、折叠是视图状态，不构成功能声明。以 Node 的功能文本、有效接口和预制文本解释职责，不用兼容旧数据的字段推断新功能边界。结构校验不能证明自然语言功能描述与代码语义一致，这部分需要 AI 和开发者核对。
 

@@ -7,7 +7,7 @@ namespace AIGameFramework.Architecture
 {
     public static class ArchitectureStore
     {
-        public const string AssetPath = "Assets/Architecture/architecture.json";
+        public const string AssetPath = "Assets/AIArchitecture/architecture.json";
 
         public static DateTime LastWriteTimeUtc()
         {
@@ -59,7 +59,8 @@ namespace AIGameFramework.Architecture
 
         private static string AbsolutePath()
         {
-            return Path.Combine(Application.dataPath, "Architecture", "architecture.json");
+            var projectRoot = Path.GetDirectoryName(Application.dataPath) ?? Application.dataPath;
+            return Path.Combine(projectRoot, AssetPath.Replace('/', Path.DirectorySeparatorChar));
         }
     }
 }

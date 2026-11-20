@@ -62,6 +62,7 @@ namespace AIGameFramework.Architecture
         private bool _canvasShortcutFocus;
         private int _pasteCount;
 
+        [MenuItem("Tools/AI 架构编辑器")]
         public static void Open()
         {
             var window = GetWindow<ArchitectureGraphWindow>();

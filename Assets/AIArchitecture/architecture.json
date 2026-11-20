@@ -31,12 +31,12 @@
             ]
         },
         {
-            "id": "167d1ffa99124ac0b400c139398aba3d",
-            "parentId": "root",
+            "id": "dfb9493eb4be44e6bc717689f6cd7d25",
+            "parentId": "61d44fbd464b462e94ed9bc175887d70",
             "templateId": "",
             "templateInstanceId": "",
-            "alias": "测试1",
-            "functionText": "",
+            "alias": "UI总管理",
+            "functionText": "UI管理器 使用GameFramework的UIComponent",
             "interfaceItems": [],
             "interfaceText": "",
             "purpose": "",
@@ -44,18 +44,18 @@
             "excludes": "",
             "codePath": "",
             "position": {
-                "x": 75.0,
-                "y": 276.0
+                "x": 722.828125,
+                "y": 411.30535888671877
             },
             "interfaces": []
         },
         {
-            "id": "2a209032173841049522a3ef86160421",
+            "id": "61d44fbd464b462e94ed9bc175887d70",
             "parentId": "root",
             "templateId": "",
             "templateInstanceId": "",
-            "alias": "测试2",
-            "functionText": "",
+            "alias": "外围管理器",
+            "functionText": "主要为GameFramework以及其他自定义的Mono类型管理器，占位用，没有实际功能",
             "interfaceItems": [],
             "interfaceText": "",
             "purpose": "",
@@ -63,46 +63,13 @@
             "excludes": "",
             "codePath": "",
             "position": {
-                "x": 360.0,
-                "y": 276.0
-            },
-            "interfaces": []
-        },
-        {
-            "id": "c07a531486f846169d77d590b32f3d81",
-            "parentId": "167d1ffa99124ac0b400c139398aba3d",
-            "templateId": "01082b4e2bb24c4fbc489aa52a663eda",
-            "templateInstanceId": "c07a531486f846169d77d590b32f3d81",
-            "alias": "",
-            "functionText": "",
-            "interfaceItems": [],
-            "interfaceText": "",
-            "purpose": "",
-            "owns": "",
-            "excludes": "",
-            "codePath": "",
-            "position": {
-                "x": 75.0,
-                "y": 477.0
+                "x": 719.7149047851563,
+                "y": 213.96041870117188
             },
             "interfaces": []
         }
     ],
-    "templates": [
-        {
-            "id": "01082b4e2bb24c4fbc489aa52a663eda",
-            "parentTemplateId": "",
-            "name": "新预制模块",
-            "presetText": "aaa\n",
-            "functionText": "",
-            "interfaceItems": [],
-            "interfaceText": "",
-            "purpose": "",
-            "owns": "",
-            "excludes": "",
-            "interfaces": []
-        }
-    ],
+    "templates": [],
     "calls": [],
     "interfaceReferences": []
 }
