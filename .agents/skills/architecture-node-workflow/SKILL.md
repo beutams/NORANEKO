@@ -5,7 +5,7 @@ description: 在 NORANEKO 项目中新增、修改或重构由架构图 Node 描
 
 # 架构 Node 功能实现
 
-处理本项目的功能模块、接口或模块间依赖时，先读 [AI 架构工作规范](../../../Assets/Dependence/AIGameFramework/Documentation~/AI_WORKFLOW.md) 和 `Assets/AIArchitecture/architecture.json`。AIGameFramework 包位于 `Assets/Dependence/AIGameFramework`；规范解释字段语义，JSON 提供 Node 实例、预制定义与引用关系。仅讨论编辑器界面而未涉及功能模块时，无须套用本流程。
+处理本项目的功能模块、接口或模块间依赖时，先读 [AI 架构工作规范](../../../Assets/Dependence/AIGameFramework/Documentation~/AI_WORKFLOW.md) 和 `Assets/Dependence/AIGameFramework/architecture.json`。AIGameFramework 包位于 `Assets/Dependence/AIGameFramework`；规范解释字段语义，JSON 提供 Node 实例、预制定义与引用关系。仅讨论编辑器界面而未涉及功能模块时，无须套用本流程。
 
 1. 找到受影响的 Node，读其 `functionText`、父链及有效接口；预制实例还要读对应 `presetText`、预制接口和固定子节点。结合现有代码确认实际职责。功能文本为空或互相冲突时，不把空白当成无限制授权。
 2. 为新需求选择边界内的现有 Node，或定义职责明确的新 Node 与合理父节点。父子关系表示功能延伸，不能代替跨模块接口依赖。
